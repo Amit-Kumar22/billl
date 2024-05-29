@@ -1,0 +1,111 @@
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            height: fit-content;
+        }
+        .colspan td{
+            text-align: center !important;
+        }
+
+        .invoice-container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background-color: rgb(225, 236, 236);
+        }
+        .footer{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-top: 50px;
+        }
+        .header{   
+            border-radius: 10px;
+            background-repeat: no-repeat;
+            background-position: right;
+            padding: 8px 0px;
+        }
+
+        .header, .footer {
+            text-align: center;
+            margin-bottom: 20px;  
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+        .bill-details{ 
+            margin-top: -17px;
+        }
+
+        .bill-details, .items, .total {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .bill-details table, .items table, .total table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .bill-details td, .items th, .items td, .total td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        .bill-details td{
+            border: 1px groove #beb6b6 ;
+        }
+
+        .items th, .total tr:nth-child(1) {
+            background-color: #91afe1;
+        }
+        .items tbody tr:nth-child(odd), .total tr:nth-child(even) {
+            background-color: #f4f4f4;
+            
+          }
+
+        .items th, .items td {
+            text-align: center;
+        }
+
+        .total td {
+            font-weight: bold;
+        }
+
+        .total td:last-child {
+            text-align: right;
+        }
+
+        @media print {
+            body {
+                margin: 0;
+            }
+
+            .invoice-container {
+                border: none;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .footer {
+                position: fixed;
+                bottom: -22px;
+                width: 100%;
+                text-align: center;
+                background-color: #fff;
+                padding: 7px 0;   
+                gap: 0.5rem;      
+            }
+              
+        }
